@@ -26,6 +26,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #error "Do not use in VM build"
 #endif
 
+#include <dinput.h>
+
 #include "cg_local.h"
 
 static int (QDECL *syscall)( int arg, ... ) = (int (QDECL *)( int, ...))-1;
@@ -44,10 +46,12 @@ int PASSFLOAT( float x ) {
 
 void	trap_Print( const char *fmt ) {
 	syscall( CG_PRINT, fmt );
+	OutputDebugStringA(fmt);
 }
 
 void	trap_Error( const char *fmt ) {
 	syscall( CG_ERROR, fmt );
+	OutputDebugStringA(fmt);
 }
 
 int		trap_Milliseconds( void ) {

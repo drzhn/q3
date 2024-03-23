@@ -20,6 +20,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 ===========================================================================
 */
 //
+#include <dinput.h>
+
 #include "g_local.h"
 
 // this file is only included when building a dll
@@ -43,10 +45,12 @@ int PASSFLOAT( float x ) {
 
 void	trap_Printf( const char *fmt ) {
 	syscall( G_PRINT, fmt );
+	OutputDebugStringA(fmt);
 }
 
 void	trap_Error( const char *fmt ) {
 	syscall( G_ERROR, fmt );
+	OutputDebugStringA(fmt);
 }
 
 int		trap_Milliseconds( void ) {

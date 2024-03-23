@@ -20,6 +20,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 ===========================================================================
 */
 //
+#include <dinput.h>
+
 #include "ui_local.h"
 
 // this file is only included when building a dll
@@ -42,10 +44,12 @@ int PASSFLOAT( float x ) {
 
 void trap_Print( const char *string ) {
 	syscall( UI_PRINT, string );
+	OutputDebugStringA(string);
 }
 
 void trap_Error( const char *string ) {
 	syscall( UI_ERROR, string );
+	OutputDebugStringA(string);
 }
 
 int trap_Milliseconds( void ) {

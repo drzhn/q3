@@ -571,6 +571,8 @@ void Conbuf_AppendText( const char *pMsg )
 	SendMessage( s_wcd.hwndBuffer, EM_LINESCROLL, 0, 0xffff );
 	SendMessage( s_wcd.hwndBuffer, EM_SCROLLCARET, 0, 0 );
 	SendMessage( s_wcd.hwndBuffer, EM_REPLACESEL, 0, (LPARAM) buffer );
+
+	OutputDebugStringA(buffer);
 }
 
 /*

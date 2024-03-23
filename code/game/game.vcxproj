@@ -103,6 +103,7 @@
       <SubSystem>Windows</SubSystem>
       <BaseAddress>0x20000000</BaseAddress>
       <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(SolutionDir)..\_data\qagame$(TargetExt)</OutputFile>
     </Link>
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -137,6 +138,7 @@
       <GenerateMapFile>true</GenerateMapFile>
       <SubSystem>Windows</SubSystem>
       <BaseAddress>0x20000000</BaseAddress>
+      <OutputFile>$(SolutionDir)..\_data\qagame$(TargetExt)</OutputFile>
     </Link>
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -171,6 +173,7 @@
       <SubSystem>Windows</SubSystem>
       <BaseAddress>0x20000000</BaseAddress>
       <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(SolutionDir)..\_data\baseq3\qagame$(TargetExt)</OutputFile>
     </Link>
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -205,6 +208,7 @@
       <GenerateMapFile>true</GenerateMapFile>
       <SubSystem>Windows</SubSystem>
       <BaseAddress>0x20000000</BaseAddress>
+      <OutputFile>$(SolutionDir)..\_data\baseq3\qagame$(TargetExt)</OutputFile>
     </Link>
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>

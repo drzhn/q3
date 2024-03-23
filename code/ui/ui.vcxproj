@@ -110,6 +110,7 @@
       <GenerateMapFile>true</GenerateMapFile>
       <BaseAddress>0x40000000</BaseAddress>
       <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(SolutionDir)..\_data\$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -144,6 +145,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <GenerateMapFile>true</GenerateMapFile>
       <BaseAddress>0x40000000</BaseAddress>
+      <OutputFile>$(SolutionDir)..\_data\$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -177,6 +179,7 @@
       <GenerateMapFile>true</GenerateMapFile>
       <BaseAddress>0x40000000</BaseAddress>
       <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(SolutionDir)..\_data\baseq3\$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -210,6 +213,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateMapFile>true</GenerateMapFile>
       <BaseAddress>0x40000000</BaseAddress>
+      <OutputFile>$(SolutionDir)..\_data\baseq3\$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <Midl>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>

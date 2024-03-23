@@ -235,15 +235,7 @@ void QDECL Com_Error( int code, const char *fmt, ... ) {
 	static int	errorCount;
 	int			currentTime;
 
-#if defined(_WIN32) && defined(_DEBUG)
-	if ( code != ERR_DISCONNECT && code != ERR_NEED_CD ) {
-		if (!com_noErrorInterrupt->integer) {
-			__asm {
-				int 0x03
-			}
-		}
-	}
-#endif
+
 
 	// when we are running automated scripts, make sure we
 	// know if anything failed
@@ -309,6 +301,16 @@ void QDECL Com_Error( int code, const char *fmt, ... ) {
 	Com_Shutdown ();
 
 	Sys_Error ("%s", com_errorMessage);
+
+//#if defined(_WIN32) && defined(_DEBUG)
+//	if (code != ERR_DISCONNECT && code != ERR_NEED_CD) {
+//		if (!com_noErrorInterrupt->integer) {
+//			__asm {
+//				int 0x03
+//			}
+//		}
+//	}
+//#endif
 }
 
 

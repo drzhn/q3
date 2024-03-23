@@ -606,8 +606,16 @@ void * QDECL Sys_LoadDll( const char *name, char *fqpath , int (QDECL **entryPoi
 	}
 #endif
 
-	dllEntry = ( void (QDECL *)( int (QDECL *)( int, ... ) ) )GetProcAddress( libHandle, "dllEntry" ); 
+	dllEntry = ( void (QDECL *)( int (QDECL *)( int, ... ) ) )GetProcAddress( libHandle, "dllEntry" );
+	if ( dllEntry == NULL )
+	{
+		Com_Printf("Failed getting process address of dllEntry\n");
+	}
 	*entryPoint = (int (QDECL *)(int,...))GetProcAddress( libHandle, "vmMain" );
+	if ( *entryPoint == NULL)
+	{
+		Com_Printf("Failed getting process address of vmMain\n");
+	}
 	if ( !*entryPoint || !dllEntry ) {
 		FreeLibrary( libHandle );
 		return NULL;

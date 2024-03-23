@@ -1199,7 +1199,7 @@ static qboolean GLW_LoadOpenGL( const char *drivername )
 	// 
 	if ( QGL_Init( buffer ) ) 
 	{
-		cdsFullscreen = r_fullscreen->integer;
+		cdsFullscreen = 0;// r_fullscreen->integer;
 
 		// create the window and set up the context
 		if ( !GLW_StartDriverAndSetMode( drivername, r_mode->integer, r_colorbits->integer, cdsFullscreen ) )

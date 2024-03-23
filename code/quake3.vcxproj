@@ -691,6 +691,15 @@
       <Project>{a410161f-ae9f-485d-a01f-5294891430a6}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="cgame\cgame.vcxproj">
+      <Project>{c878e295-cb82-4b40-8ecf-5ce5525466fa}</Project>
+    </ProjectReference>
+    <ProjectReference Include="game\game.vcxproj">
+      <Project>{f9ee10da-2404-4154-b904-f93c936c040a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="q3_ui\q3_ui.vcxproj">
+      <Project>{d454c4c7-7765-4149-abad-05fdeb9d94f8}</Project>
+    </ProjectReference>
     <ProjectReference Include="renderer\renderer.vcxproj">
       <Project>{ab424155-fbed-4d8d-b007-5b6cf93ea395}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
@@ -698,6 +707,9 @@
     <ProjectReference Include="splines\Splines.vcxproj">
       <Project>{dbaf2c53-3858-455d-a1ae-3fc093515314}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="ui\ui.vcxproj">
+      <Project>{a8eac38e-c7da-42f8-811d-77fd092b9d19}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

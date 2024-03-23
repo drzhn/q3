@@ -131,6 +131,9 @@ void mapGammaMax( void ) {
 ** This routine should only be called if glConfig.deviceSupportsGamma is TRUE
 */
 void GLimp_SetGamma( unsigned char red[256], unsigned char green[256], unsigned char blue[256] ) {
+	Com_DPrintf("WAR	NING: TURNING OFF GAMMA\n");
+	return;
+
 	unsigned short table[3][256];
 	int		i, j;
 	int		ret;

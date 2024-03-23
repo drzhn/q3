@@ -82,13 +82,13 @@ if ($DO_WIN32 eq 1)
 	{
 	  $DIR = 'Debug';
 		system("cp -v $DIR/quake3.exe \$Q3BASE");
-		system("cp -v $DIR/cgame.dll $DIR/qagame.dll $DIR/ui.dll \$Q3BASE/baseq3");
+		system("cp -v $DIR/cgamex86.dll $DIR/qagamex86.dll $DIR/uix86.dll \$Q3BASE/baseq3");
 	}
 	elsif ($config eq 'debug-TA')
 	{
 		$DIR = 'Debug_TA';
 		system("cp -v $DIR/quake3.exe \$Q3BASE");
-		system("cp -v $DIR/cgame.dll $DIR/qagame.dll $DIR/ui.dll \$Q3BASE/missionpack");
+		system("cp -v $DIR/cgamex86.dll $DIR/qagamex86.dll $DIR/uix86.dll \$Q3BASE/missionpack");
 	}
 	elsif($config eq 'release-TA')
 	{
